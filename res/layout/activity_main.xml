@@ -1,0 +1,25 @@
+<!-- 整体思路 -->
+<!-- 整体界面是一个DrawerLayout,主要内容区是个FrameLayout, 菜单栏是个fragment,fragment里面是一个listView,listView里面分有一个headerview和itemview -->
+<!-- fragment 不要忘了android:name = "xxx" -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.frank.myzhihutest.MainActivity" >
+    
+    <FrameLayout
+         android:id="@+id/container"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         ></FrameLayout>
+        
+    <fragment 
+        android:id="@+id/navigation_drawer"
+        android:name="com.frank.myzhihutest.fragments.NavigationDrawerFragment"
+        android:layout_width="@dimen/fragment_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"/>
+</android.support.v4.widget.DrawerLayout>
+
+
